@@ -19,7 +19,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
     <nav id="menu-buttons">
         <ul>
             <li><a href="https://pastebin.run/api">API</a
-            ><li><a href="https://github.com/pastebinrun/pastebinrun/">Source code</a
+            ><li><a href="https://codeberg.org/xfix/pastebinrun">Source code</a
         ></ul>
     </nav>
 </header>

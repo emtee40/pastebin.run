@@ -5,10 +5,9 @@
 use crate::models::paste::{self, ExtraPasteParameters, InsertionError};
 use crate::models::Cors;
 use crate::Db;
-use chrono::Duration;
 use chrono::Utc;
-use rocket::form::{self, Form, FromFormField, ValueField};
-use std::error::Error;
+use iso8601_duration::Duration;
+use rocket::form::{self, Error, Form, FromFormField, ValueField};
 
 #[derive(FromForm)]
 pub struct PasteForm {
@@ -23,10 +22,9 @@ struct Expiration(Option<Duration>);
 
 impl<'r> FromFormField<'r> for Expiration {
     fn from_value(field: ValueField<'r>) -> form::Result<'r, Self> {
-        let duration = time_parse::duration::parse_nom(field.value).map_err(Box::from)?;
-        let duration =
-            Duration::from_std(duration).map_err(|x| -> Box<dyn Error + Send> { Box::new(x) })?;
-        Ok(Self(Some(duration)))
+        Ok(Self(Some(Duration::parse(field.value).map_err(|_| {
+            Error::validation("invalid ISO 8601 duration")
+        })?)))
     }
 }
 

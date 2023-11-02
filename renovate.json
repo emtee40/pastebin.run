@@ -1,5 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "ignoreDeps": ["node"]
+  "ignoreDeps": ["node"],
+  "packageRules": [
+    {
+      "matchSourceUrls": ["https://github.com/SergioBenitez/Rocket"],
+      "groupName": "rocket monorepo"
+    }
+  ]
 }

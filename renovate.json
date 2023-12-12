@@ -7,5 +7,6 @@
       "matchSourceUrls": ["https://github.com/SergioBenitez/Rocket"],
       "groupName": "rocket monorepo"
     }
-  ]
+  ],
+  "osvVulnerabilityAlerts": true
 }

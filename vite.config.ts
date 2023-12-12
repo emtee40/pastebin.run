@@ -11,6 +11,13 @@ import solidPlugin from "vite-plugin-solid";
 export default defineConfig({
   test: {
     environment: "jsdom",
+    deps: {
+      optimizer: {
+        web: {
+          exclude: ["solid-js"],
+        },
+      },
+    },
   },
   plugins: [solidPlugin()],
   build: {

@@ -6,6 +6,20 @@
     {
       "matchSourceUrls": ["https://github.com/SergioBenitez/Rocket"],
       "groupName": "rocket monorepo"
+    },
+    {
+      "matchPackageNames": [
+        "@solidjs/testing-library",
+        "@testing-library/jest-dom",
+        "@typescript-eslint/eslint-plugin",
+        "@typescript-eslint/parser",
+        "eslint",
+        "jsdom",
+        "prettier",
+        "typescript",
+        "vitest"
+      ],
+      "automerge": true
     }
   ],
   "osvVulnerabilityAlerts": true

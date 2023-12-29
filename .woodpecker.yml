@@ -28,13 +28,13 @@ steps:
       - reuse lint
   rustfmt:
     group: test
-    image: rust:1.74.1@sha256:fab83818c66dda8471f8b3021f518e1ed5121aa89eaf8448ec453637fda9f92a
+    image: rust:1.75.0@sha256:85dcf8f6723b3045a200d1b5ac60f75bb26efe43788071d5f838a35e10003af2
     commands:
       - rustup component add rustfmt
       - cargo fmt --check
   test:
     group: test
-    image: rust:1.74.1@sha256:fab83818c66dda8471f8b3021f518e1ed5121aa89eaf8448ec453637fda9f92a
+    image: rust:1.75.0@sha256:85dcf8f6723b3045a200d1b5ac60f75bb26efe43788071d5f838a35e10003af2
     commands:
       - cargo build --locked --verbose
       - cargo test --locked --verbose

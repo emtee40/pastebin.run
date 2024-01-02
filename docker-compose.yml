@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2024 Kamila Borowska <kamila@borowska.pw>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16.1-alpine3.19@sha256:cd1f1132c8a8c92e8ba8a876d41710220cb2fe2a6fd7e89981af8f40a6bdba42
+    environment:
+      PG_PASSWORD: password
+  app:
+    build:
+      context: .
+      target: watcher
+    volumes:
+      - .:/app
+    ports:
+      - 127.0.0.1:8000:8000
+  vite:
+    build:
+      context: .
+      target: watcher-vite
+    volumes:
+      - .:/app
+    ports:
+      - 127.0.0.1:5173:5173

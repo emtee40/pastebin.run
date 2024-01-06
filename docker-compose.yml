@@ -6,7 +6,7 @@ version: "3.8"
 
 services:
   postgres:
-    image: postgres:16.1-alpine3.19@sha256:cd1f1132c8a8c92e8ba8a876d41710220cb2fe2a6fd7e89981af8f40a6bdba42
+    image: postgres:16.1-alpine3.19@sha256:d9449d47e5bc5ac6b832168b0f38e7ea7762ac75c574963d5ebfd75090f55d35
     environment:
       PG_PASSWORD: password
   app:

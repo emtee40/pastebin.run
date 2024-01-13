@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
-FROM rust:1.75.0-slim-bookworm@sha256:90a3721bb0a8f79ab4a4cb20e7f78c050c9cc253908f704b8b49d0427818b8f5 AS base-rust-devel
+FROM rust:1.75.0-slim-bookworm@sha256:52d43338714f1939b0a54f2004f76b7cd0e7cb0e8297c909a2f54c1942f990ff AS base-rust-devel
 RUN apt-get update \
  && apt-get install --no-install-recommends -y libpq-dev=15.5-0+deb12u1 libssl-dev=3.0.11-1~deb12u2 pkg-config=1.8.1-1 \
  && apt-get clean \

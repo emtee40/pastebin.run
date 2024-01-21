@@ -28,8 +28,8 @@
   "devDependencies": {
     "@solidjs/testing-library": "0.8.5",
     "@testing-library/jest-dom": "6.2.0",
-    "@typescript-eslint/eslint-plugin": "6.18.1",
-    "@typescript-eslint/parser": "6.18.1",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@typescript-eslint/parser": "6.19.0",
     "eslint": "8.56.0",
     "jsdom": "24.0.0",
     "prettier": "3.2.2",

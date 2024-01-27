@@ -23,7 +23,7 @@ steps:
       - npx prettier --check .
   reuse:
     group: test
-    image: fsfe/reuse:2.1.0@sha256:888418362aa2a8ebea12d8dbfb41fa8eeabd0c423f42df7e3968af4cbb8d2ef1
+    image: fsfe/reuse:3.0.1@sha256:f8f4851e199f44a0e827ea7d248228e2045e26750707e4f5f1b5875caf4ac51a
     commands:
       - reuse lint
   rustfmt:
